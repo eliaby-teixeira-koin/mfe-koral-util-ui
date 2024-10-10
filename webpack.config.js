@@ -1,14 +1,13 @@
-const { merge } = require("webpack-merge");
-const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
-const path = require("path");
+const { merge } = require('webpack-merge')
+const singleSpaDefaults = require('webpack-config-single-spa-react-ts')
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: "koin",
-    projectName: "mfe-koral-util-ui",
+    orgName: 'koin',
+    projectName: 'mfe-koral-util-ui',
     webpackConfigEnv,
     argv,
-  });
+  })
 
   // modify the webpack config however you'd like to by adding to this object
   return merge(defaultConfig, {
@@ -17,5 +16,5 @@ module.exports = (webpackConfigEnv, argv) => {
     //     components: path.resolve(__dirname, "src/components"),
     //   },
     // },
-  });
-};
+  })
+}
