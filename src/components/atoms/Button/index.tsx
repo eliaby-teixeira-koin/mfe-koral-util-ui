@@ -1,5 +1,8 @@
+import React from 'react';
 import { ButtonContainer }  from './styles';
 import { ButtonProps } from './props';
+import { theme } from "../../../themes/default";
+import { iconsizes } from './consts';
 
 export function Button({
    text,
@@ -11,7 +14,10 @@ export function Button({
    iconStart,
    iconEnd
 }: ButtonProps) {
-   console.log(iconOnly);
+   const cloneElement = (element) => React.cloneElement(element, {
+      size: iconsizes[size],
+      color: theme[variant]
+   })
    return (
       <ButtonContainer
          variant={variant}
@@ -19,10 +25,10 @@ export function Button({
          size={size}
          iconOnly={iconOnly}
       >
-         {iconOnly ? icon : null}
-         {iconOnly ? null : iconStart}
-         {iconOnly ? null : <label>{text} {size}</label>}
-         {iconOnly ? null : iconEnd}
+         {iconOnly && icon && cloneElement(icon)}
+         {!iconOnly && iconStart && cloneElement(iconStart)}
+         {!iconOnly && text && <label>{text}</label>}
+         {!iconOnly && iconEnd && cloneElement(iconEnd)}
       </ButtonContainer>
    )
 }

@@ -1,7 +1,10 @@
 import { styled } from "styled-components";
 import { theme } from "../../../themes/default";
 import { ButtonProps } from "./props";
-import { backgrounds, bordercolors, colors, fontsizes, heights, hoverbackgrounds, hoverbordercolors, hoverboxshadows, hovercolors, paddings, paddingsIconOlny, widths } from "./consts";
+import {
+   backgrounds, bordercolors, colors, fontsizes, heights, hoverbackgrounds, hoverbordercolors, hoverboxshadows,
+   hovercolors, paddings, paddingsIconOlny, widths
+} from "./consts";
 
 export const ButtonContainer = styled.button<ButtonProps>`
    display: flex;

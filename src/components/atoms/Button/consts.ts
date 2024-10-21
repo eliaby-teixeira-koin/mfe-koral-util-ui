@@ -107,4 +107,12 @@ export const paddingsIconOlny = {
    lg: '0.75rem',
    xl: '0.875rem',
    xxl: '1rem',
+}; 
+
+export const iconsizes = {
+   sm: 16,
+   md: 18,
+   lg: 20,
+   xl: 22,
+   xxl: 24
 };
