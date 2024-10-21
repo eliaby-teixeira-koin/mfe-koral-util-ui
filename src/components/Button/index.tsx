@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonContainer }  from './styles';
 import { ButtonProps } from './props';
-import { theme } from "../../../themes/default";
+import { theme } from "../../themes/default";
 import { iconsizes } from './consts';
 
 export function Button({

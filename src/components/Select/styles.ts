@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { theme } from "../../../themes/default";
+import { theme } from "../../themes/default";
 import { SelectProps } from "./props";
 import {
    backgrounds,
